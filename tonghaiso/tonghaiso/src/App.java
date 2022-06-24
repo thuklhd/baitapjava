@@ -62,8 +62,7 @@ return s;
     public static void main(String[] args) throws Exception {
         String a="655555555555555555554365435555555555555544745765476547654765476476";
         String b="65555555465547654755543654365465555555555547654755554765755555555544745765476547654765476436";
-        a=fill(a, b.length());
-        System.out.println(a);
+     
       System.out.println(total(a, b));
      
      
