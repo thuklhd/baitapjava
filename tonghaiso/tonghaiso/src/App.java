@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class App {
 
 
@@ -6,7 +7,8 @@ public class App {
   static String fill(String string,int length)
   {
      String s1="";
-  int amount=length-string.length();
+
+     int amount=length-string.length();
     string=reverse(string);
     for (int i =0; i <amount; i++) 
     {
@@ -38,43 +40,38 @@ public class App {
 
 
 // hàm tính tổng
-   static String total( String numbera, String numberb)
+   static String total( String numberA, String numberB)
      {
+
+
     String result="";
+    int temp=0,mnemonicNumber=0,sum=0;
+    int length ;
+
+
     //kiểm tra xem số nào ngắn hơn và làm đầy
-         if ( numbera.length()<numberb.length()) 
+         if ( numberA.length()<numberB.length()) 
            {
-           numbera= fill(numbera, numberb.length());
+           numberA= fill(numberA, numberB.length());
+           length=numberB.length();
            }
-
-
-         if (numbera.length()>numberb.length() ) 
+        else
            {
-           numberb=fill(numberb, numbera.length());
+           numberB=fill(numberB, numberA.length());
+           length=numberA.length();
            }
-
   
-          int temp=0,mnemonicNumber=0,sum=0;
-          int length ;
-         if(numbera.length()>numberb.length())
-          {
-          length=numbera.length();
-          }
-          else
-          {
-           length=numberb.length();
-          }
-
+       
 
           for(int i=length-1;i>=0;i--)
           {
-          sum=numbera.charAt(i)-'0'+numberb.charAt(i)-'0'+mnemonicNumber;
+          sum=numberA.charAt(i)-'0'+numberB.charAt(i)-'0'+mnemonicNumber;
           temp=sum%10;
           mnemonicNumber=sum/10;
           result=result+temp;
           }
 
-          
+
           result=reverse(result);
 
 
