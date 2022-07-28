@@ -36,7 +36,7 @@ public class manage {
         }
         
    
-    void tinhtien()
+    void bill()
     {
         int checkIfTheObjectExists;
         System.out.println("nhap vao id muon kiem tra ");
