@@ -26,7 +26,7 @@ case 3:
 manage1.ExportCustomerInformation();
 break;
 case 4:
-manage1.tinhtien();
+manage1.bill();
 break;
 case 5:
 manage1.DeleteCustomerInformation();
